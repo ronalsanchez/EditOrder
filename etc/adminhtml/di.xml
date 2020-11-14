@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Sales\Block\Adminhtml\Order\View">
+		<plugin name="envalo_restrict_edit" type="Envalo\EditOrder\Plugin\Order\Edit\Restrict"/>
+	</type>
+    <!-- <type name="Magento\Sales\Block\Adminhtml\Order\Address\Form">
+        <plugin name="envalo_form_fields" type="Envalo\EditOrder\Plugin\Order\Edit\Address\Form"/>
+    </type> -->
+    <preference for="Magento\Sales\Block\Adminhtml\Order\Address\Form" type="Envalo\EditOrder\Block\Adminhtml\Order\Address\Form"/>
+
+    <preference for="Mageplaza\EditOrder\Block\Adminhtml\Order\Edit\BillingAddress" type="Envalo\EditOrder\Block\Adminhtml\Order\BillingAddress"/>
+    <preference for="Mageplaza\EditOrder\Block\Adminhtml\Order\Edit\ShippingAddress" type="Envalo\EditOrder\Block\Adminhtml\Order\ShippingAddress"/>
+
+</config>
+
